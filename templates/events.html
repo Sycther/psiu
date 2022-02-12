@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block content %}
+<div class="container text-center" style="max-width:65rem;">
+    <p>EVENTS PAGE</p>
+    {% for event in content.events %}
+    <div class="card mb-2 mx-auto" style="width:40rem;">
+        <div class="row g-0">
+            <div class="col">
+                <img src="{{event.img}}" style="height:18rem;" class="img-fluid rounded-3" alt="{{event.title}}">
+            </div>
+            <div class="col">
+                <div class="card-body">
+                    <h5 class="card-title">{{event.title}}</h5>
+                    <p class="card-text">{{event.desc}}</p>
+                    <p class="card-text"><small class="text-muted">{{event.datetime}}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar-brand {
+    width: 10rem;
+    font-size: x-large;
+}

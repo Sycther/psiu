@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block content %}
+<div class="container" style="max-width:65rem;">
+    <h1 class="text-center p-3 g-5">OUR BROTHERS</h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+        {% for brother in content.brothers %}
+        <div class="col">
+            <div class="card">
+                <img src="{{brother.img}}" class="card-img-top" alt="{{brother.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{brother.name}}</h5>
+                    <h6 class="card-subtitle">{{brother.title}}</h6>
+                    <p class="card-text">{{brother.desc}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
