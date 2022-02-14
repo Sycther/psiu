@@ -14,11 +14,6 @@ application.config.from_mapping(
     DATABASE=os.path.join(application.instance_path, 'flaskr.sqlite'),
 )
 
-# ensure the instance folder exists
-try:
-    os.makedirs(application.instance_path)
-except OSError:    pass
-
 # a simple page that says hello
 @application.route('/', methods=['GET'])
 def home():
