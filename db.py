@@ -9,14 +9,16 @@ transport = AIOHTTPTransport(url="https://api-us-east-1.graphcms.com/v2/ckzn0i50
 client = Client(transport=transport, fetch_schema_from_transport=True)
 
 queryBrothers = gql(
-    """
-    query BrotherList {
-        brothers {
-            name
-            title
+    """    
+    query MyQuery {
+        brotherList(where: {name: "ourBrotherOrder"}) {
+            brothers {
             desc
+            title
+            name
             img {
-            url
+                url
+            }
             }
         }
     }

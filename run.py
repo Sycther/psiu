@@ -1,5 +1,4 @@
 from http.client import HTTPException
-from msilib.schema import AppId
 import os
 
 from flask import Flask, render_template, send_file
