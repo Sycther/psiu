@@ -2,13 +2,16 @@ import os
 import json, urllib
 
 from flask import Flask, render_template
+from butter_cms import ButterCMS
 
-def loadJsonFile(url, static=False):
-    if(static):
-        f = open(url)
-    else:
-        f = urllib.request.urlopen(url)
-    return json.load(f)
+# FIXME Fallback onto previously loaded file
+
+client = ButterCMS('857e1fbc8fccc396318e1c6bd4e023489dcc159f')
+
+def loadJsonFile(url : str) -> str:
+    f = urllib.request.urlopen(url)
+    data = json.load(f)
+    return data
 
 # create and configure the app
 application = Flask(__name__, instance_relative_config=True)
@@ -30,12 +33,12 @@ def home():
 
 @application.route('/brothers')
 def our_brothers():
-    return render_template("brothers.html", content=loadJsonFile("static/our-brothers.json", True)) #content=loadJsonFile("https://our-brothers.s3.amazonaws.com/our-brothers.json",))
+    return render_template("brothers.html", content=loadJsonFile("https://drive.google.com/uc?id=1y1wkroIhPU56XrPR-_ePwlX-msqYpsOA"))
 
 @application.route('/events')
 def hello():
-    return render_template("events.html", content=loadJsonFile("static/events.json", True))
+    return render_template("events.html", content=loadJsonFile("https://drive.google.com/uc?id=154Nx1RkquXmvy_w0zJPsxOlvlQ9xofO3"))
 
 if __name__ == "__main__":
-    application.debug = True
+    application.debug = False
     application.run()
