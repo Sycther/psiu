@@ -2,17 +2,66 @@
 <div class="bg-img p-4  d-flex align-items-center justify-content-center text-center" style="
         background-image: url(/static/banners/chapter_banner.jpg);
         background-size: cover;
-        height: 35rem;
+        height: 35vmin;
         background-position: 0% 30%;">
-    <h1 style="color: #FFFFFF; font-size: 5rem;">"Unto us has befallen a mighty friendship"</h1>
+    <h1 style="color: #FFFFFF; font-size: 4vmax;">"Unto us has befallen a mighty friendship"</h1>
 </div>
 {% endblock %} {% block content %}
 <div>
-    <div class="d-flex align-items-center justify-content-center text-center bg-img p-4" style="
-                background-image: url(/static/banners/alumni.jpg);
-                background-size: cover;
-                height: 60rem;">
-        <h1 style="color: #FFFFFF;max-width: 85rem;background-color: rgba(0, 0, 0, 0.664); font-size: 4rem;">"United in friendship, Psi Upsilon members aspire to moral, intellectual and social excellence in themselves as they seek to inspire these values in society."</h1>
+    <div class="container-fluid d-flex align-items-center justify-content-center text-center bg-img p-5 g-5 img-fluid" id="cover-section-alumni">
+        <h1 class="" style="color: #FFFFFF;max-width: 75rem;background-color: rgba(0, 0, 0, 0.664); font-size: 4vmax;">"United in friendship, Psi Upsilon members aspire to moral, intellectual and social excellence in themselves as they seek to inspire these values in society."</h1>
+    </div>
+</div>
+
+<div class="container-fluid d-flex g-5 p-5 justify-content-center" style="background-color: #323D3F;">
+    <div class="row row-cols-1 row-cols-md-2 justify-content-center  g-5 p-5" style="color:#d5d5d5;">
+        <div class="col col-md-5 text-end">
+            <h1>Who Are We?</h5>
+                <p>Our fraternity is a select group sharing similar ideals, hopes, and purposes, bonded together by deep friendship and mutual understanding. Such a bond provides the foundation which enables the college student to become a poised and self-confident
+                    adult equipped with a keener mind, a greater appreciation, and broader sympathies. This bond is further fortified by a group of true and understanding friends who will stand by him throughout life. The outward manifestation of the
+                    philosophical underpinnings of Psi Upsilon are the ways in which we treat ourselves, each other, and those around us.</p>
+        </div>
+        <div class="col col-md-5 text-start">
+            <h1>Our History</h5>
+                <p>CHAPTER DESIGNATION: Alpha Omicron<br>CHAPTER FOUNDING: October 16th, 1999<br>NATIONAL FOUNDING: November 24th, 1833<br>COLORS: Garnet and Gold<br>SYMBOL: Diamond<br>PHILANTHROPY: American Foundation for Suicide Prevention</p>
+        </div>
+        <div class="col col-md-10">
+            <img src="/static/banners/all_brothers.jpg" class="img-thumbnail">
+        </div>
+    </div>
+</div>
+
+<div class="container p-5 text-center" style="width: 70%">
+    <div class="row row-cols-sm-1 row-cols-lg-3 justify-content-center">
+        <div class="card mb-4 border-0">
+            <img src="/static/awards/academic_excellence.png" alt="" class="card-img-top award-img">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Garnet & Gold Award of Academic Excellence</strong></h5>
+                <p class="card-text">2004</p>
+            </div>
+        </div>
+        <div class="card mb-4 border-0">
+            <img src="/static/awards/owl.png" alt="" class="card-img-top award-img">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Owl Award for Exceptional Academic Performance</strong></h5>
+                <p class="card-text">2004</p>
+            </div>
+        </div>
+        <div class="card mb-4 border-0">
+            <img src="/static/awards/distinction.jpg" alt="" class="card-img-top award-img">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Award of Distinction</strong></h5>
+                <p class="card-text">2005<br>2006<br>2009
+                </p>
+            </div>
+        </div>
+        <div class="card mb-4 border-0">
+            <img src="/static/awards/clasped_hands.png" alt="" class="card-img-top award-img">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Clasped Hand Award for Outstanding Philanthropy and Service</strong></h5>
+                <p class="card-text">2004</p>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

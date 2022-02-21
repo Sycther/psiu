@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% block head %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> {% endblock %} {% set title = "Contact Us" %}{% block content %}
+
+
+<div class="container">
+    <div class="row" style="padding:40px;">
+        <p>Just paste your google form URL into the action attribute and you will have a working custom form that you can style as you'd like!</p>
+        <br/>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfBc7Mm-Kjz3uC7dq46sy1nWLCfqAmUatbmT3NV5T5v8B6vvQ/formResponse" method="post" id="application-form" target="_blank">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <input type="text" name="entry.1840511397" value="" class="form-control name" id="entry_1840511397" dir="auto" aria-label="Name  " aria-required="true" placeholder="Name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <input type="text" name="entry.1410334402" value="" class="form-control major" id="entry_1410334402" dir="auto" aria-label="Major  " aria-required="true" placeholder="Major">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <input type="text" name="entry.1414586978" value="" class="form-control phone" id="entry_1414586978" dir="auto" aria-label="Phone Number  " aria-required="true" placeholder="Phone">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <input type="text" name="entry.1360132571" value="" class="form-control email" id="entry_1360132571" dir="auto" aria-label="Email" aria-required="true" placeholder="Email">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <input type="submit" id="submit" class="btn btn-custom" name="submit" value="Submit Test Form">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</section>{% endblock %}

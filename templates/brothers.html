@@ -1,11 +1,10 @@
-{% extends "base.html" %} {% block content %}
-<div class="container" style="max-width:65rem;">
-    <h1 class="text-center p-3 g-5">OUR BROTHERS</h1>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+{% extends "base.html" %} {% set title = "Our Brothers" %} {% block content %}
+<div class="container p-5" style="max-width:75rem;">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-2 justify-content-center align-items-start">
         {% for brother in content.brotherList.brothers %}
         <div class="col">
             <div class="card">
-                <img src="{{brother.img.url}}" class="card-img-top" alt="{{brother.name}}">
+                <img src="{{brother.img.url}}" class="card-img-top brother-img" alt="{{brother.name}}">
                 <div class="card-body">
                     <h5 class="card-title"><strong>{{brother.name}}</strong></h5>
                     <em class="card-subtitle">{{brother.title}}</em>

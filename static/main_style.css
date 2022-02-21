@@ -6,7 +6,38 @@ a {
     text-decoration: none;
 }
 
+.brother-img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 25rem;
+}
+
+.award-img {
+    width: 100%;
+    height: 15rem;
+    object-fit: contain;
+}
+
 .navbar-brand {
     width: 10rem;
     font-size: x-large;
+}
+
+#cover-section-alumni {
+    background-image: url(/static/banners/alumni.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 65rem;
+    background-position: 50% 30%;
+}
+
+.id {
+    height: 1148px;
+    background-image: url("/uploads/6/0/5/0/60503985/background-images/1333160718.jpg");
+    background-repeat: no-repeat;
+    background-position: undefined undefined;
+    background-size: 100%;
+    background-color: transparent;
+    background-size: cover;
 }

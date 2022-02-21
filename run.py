@@ -26,6 +26,10 @@ def our_brothers():
 def hello():
     return render_template("events.html", content=db.client.execute(db.queryEvents))
 
+@application.route('/contact')
+def contact():
+    return render_template("contact.html")
+
 @application.errorhandler(Exception)
 def err(e):
     if isinstance(e, HTTPException):
@@ -35,5 +39,5 @@ def err(e):
 
 
 if __name__ == "__main__":
-    application.debug = False
+    application.debug = True
     application.run()
