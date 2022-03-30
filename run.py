@@ -22,6 +22,8 @@ def home():
 def our_brothers():
     return render_template("brothers.html", content=db.client.execute(db.queryBrothers))
 
+
+
 @application.route('/events')
 def hello():
     return render_template("events.html", content=db.client.execute(db.queryEvents))
