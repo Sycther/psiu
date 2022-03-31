@@ -1,6 +1,9 @@
 {% extends "base.html" %} {% set title = "Events" %} {% block content %}
 <div class="container text-center g-4 p-4" style="max-width:65rem;">
-    {% for event in content.events %}
+    {% if not content.events %}
+    <h3>No Events</h3>
+    <p>We dont have any upcoming events at the moment</p>
+    {% endif %} {% for event in content.events %}
     <div class="card mb-2 mx-auto" style="width:40rem;">
         <div class="row g-0">
             <div class="col">
