@@ -16,6 +16,7 @@ queryBrothers = gql(
             desc
             title
             name
+            bio
             img {
                 url
             }

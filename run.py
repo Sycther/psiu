@@ -5,6 +5,7 @@ from flask import Flask, render_template, send_file
 from werkzeug.exceptions import HTTPException
 
 import db
+import json
 
 # create and configure the app
 application = Flask(__name__, instance_relative_config=True)
@@ -17,6 +18,16 @@ application.config.from_mapping(
 @application.route('/', methods=['GET'])
 def home():
     return render_template("home.html")
+
+
+### TODO: REMOVE TEST PAGE(s)
+@application.route('/brothers-f1')
+def our_brothers_f1():
+    return render_template("brothers-f1.html", content=db.client.execute(db.queryBrothers))
+
+@application.route('/brothers-f2')
+def our_brothers_f2():
+    return render_template("brothers-f2.html", content=db.client.execute(db.queryBrothers))
 
 @application.route('/brothers')
 def our_brothers():

@@ -41,3 +41,19 @@ a {
     background-color: transparent;
     background-size: cover;
 }
+
+.overlay-img-dark {
+    filter: brightness(40%);
+}
+
+.overlay-dark {
+    background-color: rgba(black, .4);
+}
+
+.visible {
+    filter: brightness(100%);
+}
+
+.invisible {
+    filter: brightness(0%);
+}

@@ -5,9 +5,9 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-2 justify-content-center align-items-start">
         {% for brother in content.brotherList.brothers %}
         <div class="col">
-            <a tabindex="0" class="btn p-0" data-bs-toggle="popover" data-bs-trigger="hover focus" title="{{brother.name}}" data-bs-content="{{brother.bio}}">
+            <a tabindex="0" class="btn p-0" data-bs-toggle="popover" data-bs-trigger="hover focus" title="{{brother.name}}" data-bs-content="{{brother.bio}} ">
                 <div class="card">
-                    <img src="{{brother.img.url}}" class="card-img-top brother-img" alt="{{brother.name}}">
+                    <img src="{{brother.img.url}}" class="card-img-top brother-img" [adaptivePosition]="false" alt="{{brother.name}}">
                     <div class="card-body">
                         <h5 class="card-title"><strong>{{brother.name}}</strong></h5>
                         {% if brother.title != None %}<em class="card-subtitle">{{brother.title}}</em> {% endif %}
