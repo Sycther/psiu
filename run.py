@@ -14,20 +14,9 @@ application.config.from_mapping(
     DATABASE=os.path.join(application.instance_path, 'flaskr.sqlite'),
 )
 
-# a simple page that says hello
 @application.route('/', methods=['GET'])
 def home():
     return render_template("home.html")
-
-
-### TODO: REMOVE TEST PAGE(s)
-@application.route('/brothers-f1')
-def our_brothers_f1():
-    return render_template("brothers-f1.html", content=db.client.execute(db.queryBrothers))
-
-@application.route('/brothers-f2')
-def our_brothers_f2():
-    return render_template("brothers-f2.html", content=db.client.execute(db.queryBrothers))
 
 @application.route('/brothers')
 def our_brothers():
